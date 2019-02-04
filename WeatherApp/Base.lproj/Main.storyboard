@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatyerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather" translatesAutoresizingMaskIntoConstraints="NO" id="Gom-HU-rqB">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Rzd-Kd-kAJ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="iVS-Qj-Xp9">
+                                <rect key="frame" x="0.0" y="309.5" width="375" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbn-Bf-A3f">
+                                <rect key="frame" x="28.5" y="369.5" width="318" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gom-HU-rqB" secondAttribute="trailing" id="1if-iO-y7i"/>
+                            <constraint firstItem="Gom-HU-rqB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7Tg-Mb-qeL"/>
+                            <constraint firstItem="tbn-Bf-A3f" firstAttribute="top" secondItem="iVS-Qj-Xp9" secondAttribute="bottom" constant="12" id="EAn-M4-jl5"/>
+                            <constraint firstItem="iVS-Qj-Xp9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Flj-a8-fnl"/>
+                            <constraint firstAttribute="bottom" secondItem="Gom-HU-rqB" secondAttribute="bottom" id="I0N-mh-sa2"/>
+                            <constraint firstItem="Gom-HU-rqB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KEB-hM-XR5"/>
+                            <constraint firstItem="Rzd-Kd-kAJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nb1-ad-ncr"/>
+                            <constraint firstItem="tbn-Bf-A3f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PQH-CB-Fym"/>
+                            <constraint firstItem="Rzd-Kd-kAJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YtJ-kW-uT3"/>
+                            <constraint firstItem="Rzd-Kd-kAJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="kur-4j-wLY"/>
+                            <constraint firstItem="iVS-Qj-Xp9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mEB-Et-m1N"/>
+                            <constraint firstItem="iVS-Qj-Xp9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="piL-1h-uck"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iVS-Qj-Xp9" secondAttribute="trailing" id="zot-Io-JfG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityLabel" destination="iVS-Qj-Xp9" id="NYT-L4-z40"/>
+                        <outlet property="searchBar" destination="Rzd-Kd-kAJ" id="0NL-dN-uDC"/>
+                        <outlet property="tempLabel" destination="tbn-Bf-A3f" id="bdf-K9-M2d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="weather" width="4000" height="6000"/>
+    </resources>
+</document>
